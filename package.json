@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon scr/index.js",
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "prettify": "prettier --write src/**/*.{js}"
   },
   "keywords": [
     "javascript",
@@ -15,5 +16,8 @@
     "backend"
   ],
   "author": "Manoj Dhaka",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
 }
