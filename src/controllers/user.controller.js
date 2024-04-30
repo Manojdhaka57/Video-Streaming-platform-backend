@@ -4,6 +4,7 @@ import { User } from "../models/user.model.js";
 import { uploadOnCloudinary } from "../utils/cloudinary.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import jwt from "jsonwebtoken";
+import mongoose from "mongoose";
 
 const generateAccessTokenAndrefreshToken = async (userId) => {
   try {
@@ -234,7 +235,7 @@ const changeCurrentPassword = asyncHandler(async (req, res) => {
 const getCurrentUser = asyncHandler(async (req, res) => {
   return res
     .status(200)
-    .json(new ApiResponse(200, req.user, "Current details fetched"));
+    .json(new ApiResponse(200, req.user, "Current user details fetched"));
 });
 
 const updateAccountDetails = asyncHandler(async (req, res) => {
